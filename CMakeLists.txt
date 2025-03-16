@@ -10,6 +10,9 @@ set(SOURCES
     src/stack.c
     src/opcode.c
     src/lexer.c
+    src/parse.c
+    src/generate.c
+    src/writer.c
 )
 
 include_directories(include)
