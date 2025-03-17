@@ -1,5 +1,5 @@
-#ifndef ARIA_PARSE_H
-#define ARIA_PARSE_H
+#ifndef ARIA_PARSER_H
+#define ARIA_PARSER_H
 
 #include "lexer.h"
 
@@ -10,4 +10,4 @@ extern int rpn_pos;
 
 void parse_expression(Lexer *lexer);
 
-#endif // ARIA_PARSE_H
+#endif // ARIA_PARSER_H

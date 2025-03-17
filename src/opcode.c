@@ -17,13 +17,13 @@ void exec_PUSH(VM *vm)
                     (vm->code[vm->ip++] << 8) |
                     (vm->code[vm->ip++]);
     push(vm, value);
-    printf("PUSH %d\n", value);
+    // printf("PUSH %d\n", value);
 }
 
 void exec_POP(VM *vm)
 {
     int32_t value = pop(vm);
-    printf("POP %d\n", value);
+    // printf("POP %d\n", value);
 }
 
 void exec_ADD(VM *vm)
@@ -32,7 +32,7 @@ void exec_ADD(VM *vm)
     int32_t a = pop(vm);
     int32_t result = a + b;
     push(vm, result);
-    printf("ADD %d + %d = %d\n", a, b, result);
+    // printf("ADD %d + %d = %d\n", a, b, result);
 }
 
 void exec_SUB(VM *vm)
@@ -41,7 +41,7 @@ void exec_SUB(VM *vm)
     int32_t a = pop(vm);
     int32_t result = a - b;
     push(vm, result);
-    printf("SUB %d - %d = %d\n", a, b, result);
+    // printf("SUB %d - %d = %d\n", a, b, result);
 }
 
 void exec_MUL(VM *vm)
@@ -50,7 +50,7 @@ void exec_MUL(VM *vm)
     int32_t a = pop(vm);
     int32_t result = a * b;
     push(vm, result);
-    printf("MUL %d * %d = %d\n", a, b, result);
+    // printf("MUL %d * %d = %d\n", a, b, result);
 }
 
 void exec_DIV(VM *vm)
@@ -59,12 +59,12 @@ void exec_DIV(VM *vm)
     int32_t a = pop(vm);
     int32_t result = a / b;
     push(vm, result);
-    printf("DIV %d / %d = %d\n", a, b, result);
+    // printf("DIV %d / %d = %d\n", a, b, result);
 }
 
 void exec_HALT(VM *vm)
 {
-    printf("HALT\n");
+    // printf("HALT\n");
     exit(0);
 }
 

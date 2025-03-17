@@ -1,7 +1,7 @@
 #ifndef ARIA_GENERATE_H
 #define ARIA_GENERATE_H
 
-#include "parse.h"
+#include "parser.h"
 
 #include "vm.h"
 
