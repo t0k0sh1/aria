@@ -22,6 +22,18 @@ void generate_bytecode()
         {
             bytecode[bytecode_pos++] = ADD; // ADD
         }
+        else if (token.type == TOKEN_MINUS)
+        {
+            bytecode[bytecode_pos++] = SUB; // SUB
+        }
+        else if (token.type == TOKEN_MUL)
+        {
+            bytecode[bytecode_pos++] = MUL; // MUL
+        }
+        else if (token.type == TOKEN_DIV)
+        {
+            bytecode[bytecode_pos++] = DIV; // DIV
+        }
     }
     bytecode[bytecode_pos++] = HALT; // HALT
 }

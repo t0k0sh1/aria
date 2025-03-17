@@ -41,6 +41,18 @@ void parse_expression(Lexer *lexer)
             }
             op_stack[op_stack_pos++] = token;
         }
+        else if (token.type == TOKEN_LPAREN)
+        {
+            op_stack[op_stack_pos++] = token;
+        }
+        else if (token.type == TOKEN_RPAREN)
+        {
+            while (op_stack_pos > 0 && op_stack[op_stack_pos - 1].type != TOKEN_LPAREN)
+            {
+                rpn[rpn_pos++] = op_stack[--op_stack_pos];
+            }
+            op_stack_pos--;
+        }
     }
     while (op_stack_pos > 0)
     {

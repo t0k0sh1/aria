@@ -44,6 +44,10 @@ Token lexer_next_token(Lexer *lexer)
             return (Token){TOKEN_MUL, 0};
         case '/':
             return (Token){TOKEN_DIV, 0};
+        case '(':
+            return (Token){TOKEN_LPAREN, 0};
+        case ')':
+            return (Token){TOKEN_RPAREN, 0};
         default:
             printf("Error: Unknown character '%c'\n", current);
             exit(1);
